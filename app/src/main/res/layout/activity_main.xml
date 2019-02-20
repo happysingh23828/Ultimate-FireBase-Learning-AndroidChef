@@ -198,8 +198,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/btn_login_email"
         app:layout_constraintStart_toStartOf="@+id/btn_login_email"
         app:layout_constraintTop_toTopOf="@+id/btn_login_email"
-        app:srcCompat="@drawable/ic_email_white_24dp"
-        tools:ignore="VectorDrawableCompat" />
+        app:srcCompat="@drawable/ic_email_white_24dp"/>
 
     <ImageView
         android:id="@+id/imageView7"
@@ -209,6 +208,5 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/btn_login_phone"
         app:layout_constraintTop_toTopOf="@+id/btn_login_phone"
-        app:srcCompat="@drawable/ic_local_phone_white_24dp"
-        tools:ignore="VectorDrawableCompat" />
+        app:srcCompat="@drawable/ic_local_phone_white_24dp" />
 </android.support.constraint.ConstraintLayout>

@@ -1,8 +1,8 @@
 package com.androchef.androchef_firebaselearning;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,12 +23,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         init();
         checkUserLoggedIn();
+        onClicks();
+    }
+
+    private void onClicks() {
+        loginEmail.setOnClickListener(this);
+        loginPhone.setOnClickListener(this);
+        loginFaceBook.setOnClickListener(this);
+        loginTwitter.setOnClickListener(this);
+        loginGithub.setOnClickListener(this);
     }
 
     private void checkUserLoggedIn() {
-        if (mFireBaseUser != null)
+        if (mFireBaseUser != null) {
             startActivity(new Intent(this, UserDetailActivity.class));
-        finish();
+            finish();
+        }
     }
 
     private void init() {
@@ -41,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         loginGithub = findViewById(R.id.btn_login_github);
     }
 
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -48,19 +59,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, EmailLoginActivity.class));
                 break;
             case R.id.btn_login_facebook:
-                Toast.makeText(this,"Please wait until in Next Tutorials!!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please wait until  Next Tutorials!!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btn_login_phone:
-                Toast.makeText(this,"Please wait until in Next Tutorials!!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please wait until  Next Tutorials!!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btn_login_twitter:
-                Toast.makeText(this,"Please wait until in Next Tutorials!!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please wait until  Next Tutorials!!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btn_login_gmail:
-                Toast.makeText(this,"Please wait until in Next Tutorials!!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please wait until  Next Tutorials!!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btn_login_github:
-                Toast.makeText(this,"Please wait until in Next Tutorials!!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please wait until  Next Tutorials!!", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

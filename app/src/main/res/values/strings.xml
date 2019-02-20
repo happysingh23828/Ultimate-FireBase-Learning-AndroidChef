@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">AndroChef - FireBaseLearning</string>
     <string name="enter_username">Enter Username</string>
+    <string name="enter_email">Enter Email</string>
     <string name="enter_password">Enter Password</string>
     <string name="login">LOGIN</string>
     <string name="do_not_have_have_an_account">Do not Have Have An Account ?</string>
@@ -15,4 +16,7 @@
     <string name="login_with_github">Login With Github</string>
     <string name="www_androchef_com">www.androchef.com</string>
     <string name="firebase_auth">FIREBASE AUTH</string>
+    <string name="already_have_an_account">Already Have an Account?</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_city">Enter City</string>
 </resources>

@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4.5"
+        android:layout_weight="3.0"
         android:padding="10dp"
         android:src="@drawable/androcheflogo"
         tools:ignore="ContentDescription" />
@@ -33,9 +33,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4.5"
+        android:layout_weight="5.5"
         android:orientation="vertical"
         android:padding="10dp">
+
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_person_orange_24dp"
+            android:drawablePadding="10dp"
+            android:hint="@string/enter_name"
+            android:lines="1"
+            android:imeOptions="actionNext"
+            android:textColor="#666666"
+            android:textSize="15sp"
+            tools:ignore="NestedWeights" />
 
         <EditText
             android:id="@+id/edt_email"
@@ -43,13 +59,13 @@
             android:layout_height="0dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            android:lines="1"
+            android:imeOptions="actionNext"
             android:drawableStart="@drawable/ic_email_orange_24dp"
             android:drawablePadding="10dp"
             android:hint="@string/enter_email"
             android:textColor="#666666"
             android:textSize="15sp"
-            android:lines="1"
-            android:imeOptions="actionNext"
             tools:ignore="NestedWeights" />
 
 
@@ -59,14 +75,30 @@
             android:layout_height="0dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            android:lines="1"
+            android:imeOptions="actionNext"
             android:drawableStart="@drawable/ic_lock_orange_24dp"
             android:drawablePadding="10dp"
             android:hint="@string/enter_password"
             android:inputType="textPassword"
             android:textColor="#666666"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_city"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_location_city_orange_24dp"
+            android:drawablePadding="10dp"
+            android:hint="@string/enter_city"
             android:lines="1"
             android:imeOptions="actionNext"
-            android:textSize="15sp" />
+            android:textColor="#666666"
+            android:textSize="15sp"
+            tools:ignore="NestedWeights" />
+
 
         <Button
             android:id="@+id/btn_login"
@@ -75,7 +107,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@color/orange"
-            android:text="@string/login"
+            android:text="@string/register"
             android:textColor="@color/white" />
 
 
@@ -89,7 +121,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
                 android:gravity="center"
-                android:text="@string/do_not_have_have_an_account"
+                android:text="@string/already_have_an_account"
                 android:textColor="#123456" />
 
             <Button
@@ -99,7 +131,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="0.3"
                 android:background="@drawable/bg_button_blue"
-                android:text="@string/register"
+                android:text="@string/login"
                 android:textColor="@color/white" />
 
         </LinearLayout>
