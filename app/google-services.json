@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "714574530719",
+    "firebase_url": "https://androchef-firebase.firebaseio.com",
+    "project_id": "androchef-firebase",
+    "storage_bucket": "androchef-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714574530719:android:accf2d1fea8ba8a8",
+        "android_client_info": {
+          "package_name": "com.androchef.androchef_firebaselearning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714574530719-havi7be451l0pes6nlufujel3vd493n5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androchef.androchef_firebaselearning",
+            "certificate_hash": "cf1d7d65b3fc97b53581701171dccf4507a2d858"
+          }
+        },
+        {
+          "client_id": "714574530719-p0cehdn1ktb8lkphqb4j4auo59ba716v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2K8U3XM87ofgCesQ7dOOc_IQUhyUZPRs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714574530719-p0cehdn1ktb8lkphqb4j4auo59ba716v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
