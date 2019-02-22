@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.androchef.androchef_firebaselearning.phoneauth.SubmitUserDetailActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,7 +21,8 @@ public class UserDetailActivity extends AppCompatActivity {
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     DatabaseReference mDatabaseRef = FirebaseDatabase.getInstance().getReference();
     Button btnLogout;
-    TextView name,email,city;
+    TextView name, email, city;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,16 +41,20 @@ public class UserDetailActivity extends AppCompatActivity {
     }
 
     private void setUserData() {
-        String currentUniqueId = mAuth.getCurrentUser().getUid();
-        mDatabaseRef.child("Users").child(currentUniqueId).addListenerForSingleValueEvent(new ValueEventListener() {
+        final String currentUniqueId = mAuth.getCurrentUser().getUid();
+        mDatabaseRef.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String userName = dataSnapshot.child("Name").getValue().toString();
-                String userEmail = dataSnapshot.child("Email").getValue().toString();
-                String userCity = dataSnapshot.child("City").getValue().toString();
-                name.setText(userName);
-                email.setText(userEmail);
-                city.setText(userCity);
+                if (dataSnapshot.child(currentUniqueId).exists()) {
+                    String userName = dataSnapshot.child(currentUniqueId).child("Name").getValue().toString();
+                    String userCity = dataSnapshot.child(currentUniqueId).child("City").getValue().toString();
+                    name.setText(userName);
+                    city.setText(userCity);
+                    showEmailOrPassword(dataSnapshot.child(currentUniqueId));
+                } else {
+                    startActivity(new Intent(UserDetailActivity.this, SubmitUserDetailActivity.class));
+                    finish();
+                }
             }
 
             @Override
@@ -58,12 +64,22 @@ public class UserDetailActivity extends AppCompatActivity {
         });
     }
 
-    private void onClicks(){
+    private void showEmailOrPassword(DataSnapshot userDataSnapshot) {
+        if (userDataSnapshot.child("Email").exists()) {
+            String userEmail = userDataSnapshot.child("Email").getValue().toString();
+            email.setText(userEmail);
+        } else {
+            String userPhone = userDataSnapshot.child("Phone").getValue().toString();
+            email.setText(userPhone);
+        }
+    }
+
+    private void onClicks() {
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mAuth.signOut();
-                startActivity(new Intent(UserDetailActivity.this,MainActivity.class));
+                startActivity(new Intent(UserDetailActivity.this, MainActivity.class));
                 finish();
             }
         });

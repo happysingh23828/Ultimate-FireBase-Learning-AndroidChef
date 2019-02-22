@@ -19,4 +19,13 @@
     <string name="already_have_an_account">Already Have an Account?</string>
     <string name="enter_name">Enter Name</string>
     <string name="enter_city">Enter City</string>
+    <string name="http_androchef_com">http://androchef.com</string>
+    <string name="verify_your_number">Verify Your Number</string>
+    <string name="we_will_send_you_an_otp_to_verify_your_number">We will send you an otp to verify your number</string>
+    <string name="enter_your_phone_number">Enter your Phone Number</string>
+    <string name="next">NEXT</string>
+    <string name="submit">SUBMIT</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="please_enter_your_details">Please Enter Your Details</string>
+    <string name="thank_you_for_making_an_account">Thank you for making an account .</string>
 </resources>

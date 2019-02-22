@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".phoneauth.SubmitUserDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#4581e8"
+        android:orientation="vertical"
+        android:layout_weight="1.9">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:src="@drawable/androcheflogo"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="@string/http_androchef_com"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="bottom |start"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/thank_you_for_making_an_account"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/please_enter_your_details"
+            android:layout_gravity="start |center"
+            android:layout_marginStart="20dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"/>
+
+        <EditText
+            android:id="@+id/edt_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="@string/enter_your_name"
+            android:layout_marginLeft="20dp"
+            android:inputType="textShortMessage"
+            android:imeOptions="actionNext"
+            android:lines="1"
+            android:gravity="start |center"
+            android:layout_gravity="start"
+            android:layout_marginRight="20dp"
+            tools:ignore="TextFields" />
+
+        <EditText
+            android:id="@+id/edt_user_city"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="@string/enter_city"
+            android:layout_marginLeft="20dp"
+            android:inputType="textShortMessage"
+            android:imeOptions="actionNext"
+            android:lines="1"
+            android:gravity="start |center"
+            android:layout_gravity="start"
+            android:layout_marginRight="20dp"
+            tools:ignore="TextFields" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center |end"
+            android:drawablePadding="10dp"
+            android:text="@string/submit"
+            android:textColor="@color/twitter_color"
+            android:layout_gravity="center"
+            android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+            style="but"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

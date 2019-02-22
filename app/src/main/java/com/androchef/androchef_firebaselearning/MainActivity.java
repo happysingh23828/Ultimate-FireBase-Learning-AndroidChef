@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androchef.androchef_firebaselearning.emailauth.EmailLoginActivity;
+import com.androchef.androchef_firebaselearning.phoneauth.PhoneLoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, "Please wait until  Next Tutorials!!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btn_login_phone:
-                Toast.makeText(this, "Please wait until  Next Tutorials!!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, PhoneLoginActivity.class));
                 break;
             case R.id.btn_login_twitter:
                 Toast.makeText(this, "Please wait until  Next Tutorials!!", Toast.LENGTH_SHORT).show();

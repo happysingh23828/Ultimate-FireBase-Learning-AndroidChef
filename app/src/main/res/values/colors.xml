@@ -9,5 +9,6 @@
     <color name="lightGreen">#4CAF50</color>
     <color name="facebook_color">#1C33AD</color>
     <color name="twitter_color">#6B81E2</color>
+    <color name="grey">#777f8c</color>
 
 </resources>

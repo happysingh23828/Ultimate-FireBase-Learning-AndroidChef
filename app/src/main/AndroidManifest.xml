@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".emailauth.EmailRegisterActivity"></activity>
+        <activity android:name=".phoneauth.OtpVerificationActivity"></activity>
+        <activity android:name=".phoneauth.SubmitUserDetailActivity" />
+        <activity android:name=".phoneauth.PhoneLoginActivity" />
+        <activity android:name=".emailauth.EmailRegisterActivity" />
         <activity android:name=".UserDetailActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

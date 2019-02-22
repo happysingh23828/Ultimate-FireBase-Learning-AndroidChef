@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".phoneauth.PhoneLoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#4581e8"
+        android:orientation="vertical"
+        android:layout_weight="2">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:src="@drawable/androcheflogo"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="@string/http_androchef_com"/>
+
+        <TextView
+            android:id="@+id/tv_otp_sent_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="bottom |start"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="OTP sent to +91-9109248747"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="5"
+        android:background="@color/white"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="We Have Sent you an OTP CODE."
+            android:gravity="start"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/grey"
+            />
+
+        <EditText
+            android:id="@+id/edt_otp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Enter OTP here"
+            android:layout_marginLeft="20dp"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:lines="1"
+            android:gravity="start"
+            android:layout_gravity="start"
+            android:maxLength="6"
+            android:layout_marginRight="20dp"
+            tools:ignore="TextFields" />
+
+        <TextView
+            android:id="@+id/tv_resend-otp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center |top"
+            android:layout_marginLeft="20dp"
+            android:text="Wait to resend 30 sec"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"/>
+
+        <Button
+            android:id="@+id/btn_verify"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="end |center"
+            android:drawablePadding="10dp"
+            android:text="Verify"
+            android:textColor="@color/twitter_color"
+            android:layout_gravity="right |bottom"
+            android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+            style="but"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
