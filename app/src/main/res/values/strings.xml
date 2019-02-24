@@ -28,4 +28,12 @@
     <string name="enter_your_name">Enter Your Name</string>
     <string name="please_enter_your_details">Please Enter Your Details</string>
     <string name="thank_you_for_making_an_account">Thank you for making an account .</string>
+
+
+
+
+    //FaceBook Credential
+    <string name="facebook_app_id"></string>  Add Your App Id Here
+    <string name="fb_login_protocol_scheme"></string> Add Your Login Protocol Scheme Here
+
 </resources>

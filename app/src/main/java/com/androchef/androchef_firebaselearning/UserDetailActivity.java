@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.androchef.androchef_firebaselearning.phoneauth.SubmitUserDetailActivity;
+import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -88,6 +89,7 @@ public class UserDetailActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mAuth.signOut();
                 mGoogleSignInClient.signOut();
+                LoginManager.getInstance().logOut();
                 startActivity(new Intent(UserDetailActivity.this, MainActivity.class));
                 finish();
             }
