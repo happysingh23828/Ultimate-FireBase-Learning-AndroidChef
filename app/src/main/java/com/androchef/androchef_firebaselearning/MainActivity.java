@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androchef.androchef_firebaselearning.emailauth.EmailLoginActivity;
+import com.androchef.androchef_firebaselearning.googleauth.GoogleLoginActivity;
 import com.androchef.androchef_firebaselearning.phoneauth.PhoneLoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         loginFaceBook.setOnClickListener(this);
         loginTwitter.setOnClickListener(this);
         loginGithub.setOnClickListener(this);
+        loginGMail.setOnClickListener(this);
     }
 
     private void checkUserLoggedIn() {
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, "Please wait until  Next Tutorials!!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btn_login_gmail:
-                Toast.makeText(this, "Please wait until  Next Tutorials!!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, GoogleLoginActivity.class));
                 break;
             case R.id.btn_login_github:
                 Toast.makeText(this, "Please wait until  Next Tutorials!!", Toast.LENGTH_SHORT).show();

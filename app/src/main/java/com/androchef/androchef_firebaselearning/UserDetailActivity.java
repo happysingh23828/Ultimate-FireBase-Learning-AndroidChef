@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.androchef.androchef_firebaselearning.phoneauth.SubmitUserDetailActivity;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,6 +26,10 @@ public class UserDetailActivity extends AppCompatActivity {
     Button btnLogout;
     TextView name, email, city;
 
+    //Google SignIN
+    GoogleSignInOptions gso;
+    GoogleSignInClient mGoogleSignInClient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +37,7 @@ public class UserDetailActivity extends AppCompatActivity {
         init();
         setUserData();
         onClicks();
+        setUpGoogleSignOut();
     }
 
 
@@ -65,10 +73,10 @@ public class UserDetailActivity extends AppCompatActivity {
     }
 
     private void showEmailOrPassword(DataSnapshot userDataSnapshot) {
-        if (userDataSnapshot.child("Email").exists()) {
+        if (userDataSnapshot.child("Email").exists() && !userDataSnapshot.child("Email").getValue().toString().equals("")) {
             String userEmail = userDataSnapshot.child("Email").getValue().toString();
             email.setText(userEmail);
-        } else {
+        } else if(userDataSnapshot.child("Phone").exists() && !userDataSnapshot.child("Phone").getValue().toString().equals("")) {
             String userPhone = userDataSnapshot.child("Phone").getValue().toString();
             email.setText(userPhone);
         }
@@ -79,9 +87,19 @@ public class UserDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mAuth.signOut();
+                mGoogleSignInClient.signOut();
                 startActivity(new Intent(UserDetailActivity.this, MainActivity.class));
                 finish();
             }
         });
+    }
+
+    private void setUpGoogleSignOut(){
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(Constants.FIREBASE_WEB_CLIENT_ID)
+                .requestEmail()
+                .build();
+
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
     }
 }
